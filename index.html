@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <!-- Meta viewport wajib agar tampilan web rapi di HP maupun Laptop -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio Pribadi - Tugas Sekolah</title>
+    
+    <!-- Menggunakan Tailwind CSS untuk memperindah tampilan dengan mudah -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Menggunakan Font 'Inter' dari Google Fonts agar tulisan terlihat modern -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Menggunakan Font Awesome untuk ikon media sosial dan hobi -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        /* Mengatur font utama seluruh halaman */
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased">
+
+    <!-- ========================================== -->
+    <!-- 1. BAGIAN NAVIGASI (HEADER)                -->
+    <!-- ========================================== -->
+    <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-md shadow-sm">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo atau Nama Panggilan -->
+                <a href="#" class="text-xl font-bold text-indigo-600 tracking-tight">
+                    Portofolio<span class="text-slate-800">Ku.</span>
+                </a>
+
+                <!-- Menu Navigasi untuk Layar Laptop/Tablet -->
+                <nav class="hidden md:flex space-x-8 text-sm font-medium">
+                    <a href="#beranda" class="text-slate-600 hover:text-indigo-600 transition">Beranda</a>
+                    <a href="#tentang" class="text-slate-600 hover:text-indigo-600 transition">Tentang Saya</a>
+                    <a href="#keahlian" class="text-slate-600 hover:text-indigo-600 transition">Keahlian & Mapel</a>
+                    <a href="#kontak" class="text-slate-600 hover:text-indigo-600 transition">Kontak</a>
+                </nav>
+
+                <!-- Tombol Menu untuk Layar HP -->
+                <button id="mobile-menu-btn" class="md:hidden p-2 rounded-lg text-slate-600 hover:bg-slate-100 focus:outline-none">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Dropdown Menu untuk Layar HP (Tersembunyi secara default) -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-slate-100 px-4 pt-2 pb-4 space-y-2 shadow-lg">
+            <a href="#beranda" class="block px-3 py-2 rounded-lg text-base font-medium text-slate-700 hover:bg-indigo-50 hover:text-indigo-600">Beranda</a>
+            <a href="#tentang" class="block px-3 py-2 rounded-lg text-base font-medium text-slate-700 hover:bg-indigo-50 hover:text-indigo-600">Tentang Saya</a>
+            <a href="#keahlian" class="block px-3 py-2 rounded-lg text-base font-medium text-slate-700 hover:bg-indigo-50 hover:text-indigo-600">Keahlian & Mapel</a>
+            <a href="#kontak" class="block px-3 py-2 rounded-lg text-base font-medium text-slate-700 hover:bg-indigo-50 hover:text-indigo-600">Kontak</a>
+        </div>
+    </header>
+
+    <!-- ========================================== -->
+    <!-- 2. BAGIAN HERO (PERKENALAN UTAMA)          -->
+    <!-- ========================================== -->
+    <section id="beranda" class="py-16 md:py-24 bg-gradient-to-br from-indigo-50 via-white to-blue-50">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col-reverse md:flex-row items-center gap-10">
+            
+            <!-- Kolom Kiri: Teks Perkenalan -->
+            <div class="flex-1 text-center md:text-left">
+                <span class="inline-block px-3 py-1 mb-4 text-xs font-semibold tracking-wider text-indigo-700 uppercase bg-indigo-100 rounded-full">
+                    Halo, Selamat Datang! 👋
+                </span>
+                <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold text-slate-900 leading-tight mb-4">
+                    Saya <span class="text-indigo-600">Jibran Jaris</span>
+                </h1>
+                <p class="text-base sm:text-lg text-slate-600 mb-8 leading-relaxed">
+                    Siswa kelas XI TKJ 1 di <b>SMK KARYA GUNA 2</b> yang memiliki minat tinggi di bidang jaringan komputer, olahraga voli, dan bercita-cita menjadi pengusaha sukses.
+                </p>
+                <div class="flex flex-wrap justify-center md:justify-start gap-4">
+                    <a href="#tentang" class="px-6 py-3 bg-indigo-600 text-white font-medium rounded-xl shadow-md hover:bg-indigo-700 transition">
+                        Kenali Saya Lebih Jauh
+                    </a>
+                    <a href="#kontak" class="px-6 py-3 bg-white text-slate-700 font-medium rounded-xl border border-slate-200 hover:border-indigo-300 hover:text-indigo-600 transition">
+                        Hubungi Saya
+                    </a>
+                </div>
+            </div>
+
+            <!-- Kolom Kanan: Foto Profil -->
+            <div class="flex-shrink-0">
+                <div class="relative w-48 h-48 sm:w-64 sm:h-64 rounded-full p-2 bg-white shadow-xl border border-slate-100">
+                    <!-- Ganti URL src di bawah ini dengan foto kamu sendiri -->
+                    <img 
+                        src="https://placehold.co/400x400/1e3a8a/ffffff?text=Jibran+Jaris" 
+                        onerror="this.src='https://placehold.co/400x400/cbd5e1/334155?text=Jibran'"
+                        alt="Foto Profil Jibran Jaris" 
+                        class="w-full h-full object-cover rounded-full"
+                    >
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- 3. BAGIAN TENTANG SAYA (BIODATA & HOBI)    -->
+    <!-- ========================================== -->
+    <section id="tentang" class="py-16 bg-white">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-2xl sm:text-3xl font-bold text-slate-900">Tentang Saya</h2>
+                <div class="w-16 h-1 bg-indigo-600 mx-auto mt-3 rounded-full"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Kartu Biodata Singkat -->
+                <div class="bg-slate-50 p-6 sm:p-8 rounded-2xl border border-slate-100 shadow-sm">
+                    <h3 class="text-xl font-bold text-slate-800 mb-4 flex items-center gap-2">
+                        <i class="fas fa-id-card text-indigo-600"></i> Biodata Singkat
+                    </h3>
+                    <ul class="space-y-3 text-slate-600 text-sm sm:text-base">
+                        <li class="flex justify-between border-b border-slate-200 pb-2">
+                            <span class="font-medium text-slate-800">Nama Lengkap:</span>
+                            <span>Jibran Jaris</span>
+                        </li>
+                        <li class="flex justify-between border-b border-slate-200 pb-2">
+                            <span class="font-medium text-slate-800">Kelas:</span>
+                            <span>XI TKJ 1</span>
+                        </li>
+                        <li class="flex justify-between border-b border-slate-200 pb-2">
+                            <span class="font-medium text-slate-800">Sekolah:</span>
+                            <span>SMK KARYA GUNA 2</span>
+                        </li>
+                        <li class="flex justify-between border-b border-slate-200 pb-2">
+                            <span class="font-medium text-slate-800">Domisili:</span>
+                            <span>Bekasi, Jawa Barat</span>
+                        </li>
+                        <li class="flex justify-between pt-1">
+                            <span class="font-medium text-slate-800">Cita-Cita:</span>
+                            <span class="text-indigo-600 font-semibold">Pengusaha Sukses</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Kartu Hobi Utama & Gambar Bermain Voli -->
+                <div class="bg-slate-50 p-6 sm:p-8 rounded-2xl border border-slate-100 shadow-sm flex flex-col justify-between">
+                    <div>
+                        <h3 class="text-xl font-bold text-slate-800 mb-3 flex items-center gap-2">
+                            <i class="fas fa-volleyball-ball text-amber-500"></i> Hobi: Bermain Voli
+                        </h3>
+                        <p class="text-slate-600 text-sm sm:text-base mb-4 leading-relaxed">
+                            Di luar jam belajar Teknik Komputer dan Jaringan, hobi utama saya adalah <b>bermain bola voli</b>. Olahraga ini melatih kerja sama tim, kelincahan, dan menjaga kebugaran tubuh.
+                        </p>
+                    </div>
+                    
+                    <!-- Gambar Ilustrasi Orang Bermain Voli -->
+                    <div class="relative rounded-xl overflow-hidden shadow-md border border-slate-200 bg-white">
+                        <img 
+                            src="https://images.unsplash.com/photo-1612872087720-bb876e2e67d1?auto=format&fit=crop&w=800&q=80" 
+                            onerror="this.src='https://placehold.co/600x350/1e3a8a/ffffff?text=Bermain+Voli'"
+                            alt="Orang Sedang Bermain Voli" 
+                            class="w-full h-48 object-cover hover:scale-105 transition-transform duration-300"
+                        >
+                        <div class="bg-slate-900/75 text-white text-xs px-3 py-2 flex items-center justify-between">
+                            <span><i class="fas fa-trophy text-amber-400 mr-1"></i> Sport & Teamwork</span>
+                            <span class="text-slate-300">Bola Voli</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- 4. BAGIAN KEAHLIAN & PELAJARAN FAVORIT     -->
+    <!-- ========================================== -->
+    <section id="keahlian" class="py-16 bg-slate-50">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-2xl sm:text-3xl font-bold text-slate-900">Jurusan & Pelajaran Favorit</h2>
+                <p class="text-slate-600 mt-2 text-sm sm:text-base">Kompetensi keahlian dan mata pelajaran yang paling saya sukai di sekolah</p>
+                <div class="w-16 h-1 bg-indigo-600 mx-auto mt-3 rounded-full"></div>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Item 1: Jurusan TKJ -->
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 hover:shadow-md transition">
+                    <div class="w-12 h-12 bg-indigo-100 text-indigo-600 rounded-xl flex items-center justify-center text-xl mb-4">
+                        <i class="fas fa-network-wired"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-slate-800 mb-2">Teknik Komputer & Jaringan</h3>
+                    <p class="text-slate-600 text-sm mb-4">
+                        Mempelajari perakitan komputer, konfigurasi jaringan (MikroTik/Cisco), dan dasar pembuatan web.
+                    </p>
+                    <div class="w-full bg-slate-100 rounded-full h-2">
+                        <div class="bg-indigo-600 h-2 rounded-full" style="width: 85%"></div>
+                    </div>
+                </div>
+
+                <!-- Item 2: Bahasa Jepang -->
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 hover:shadow-md transition">
+                    <div class="w-12 h-12 bg-rose-100 text-rose-600 rounded-xl flex items-center justify-center text-xl mb-4">
+                        <i class="fas fa-language"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-slate-800 mb-2">Bahasa Jepang</h3>
+                    <p class="text-slate-600 text-sm mb-4">
+                        Belajar membaca dan menulis huruf Hiragana, Katakana, serta percakapan dasar dan budaya Jepang.
+                    </p>
+                    <div class="w-full bg-slate-100 rounded-full h-2">
+                        <div class="bg-rose-500 h-2 rounded-full" style="width: 82%"></div>
+                    </div>
+                </div>
+
+                <!-- Item 3: PJOK -->
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 hover:shadow-md transition">
+                    <div class="w-12 h-12 bg-sky-100 text-sky-600 rounded-xl flex items-center justify-center text-xl mb-4">
+                        <i class="fas fa-running"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-slate-800 mb-2">PJOK</h3>
+                    <p class="text-slate-600 text-sm mb-4">
+                        Pendidikan Jasmani, Olahraga, dan Kesehatan, khususnya praktik permainan bola besar seperti bola voli.
+                    </p>
+                    <div class="w-full bg-slate-100 rounded-full h-2">
+                        <div class="bg-sky-500 h-2 rounded-full" style="width: 95%"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- 5. BAGIAN KONTAK & MEDIA SOSIAL            -->
+    <!-- ========================================== -->
+    <section id="kontak" class="py-16 bg-white">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-2xl sm:text-3xl font-bold text-slate-900">Hubungi Saya</h2>
+            <p class="text-slate-600 mt-3 mb-8 text-sm sm:text-base">
+                Ingin berdiskusi seputar TKJ, bahasa Jepang, atau mengajak main voli bareng? Yuk terhubung melalui media sosial saya di bawah ini!
+            </p>
+
+            <!-- Tautan Media Sosial (WhatsApp, Instagram, TikTok) -->
+            <div class="flex flex-wrap justify-center gap-4">
+                <!-- Tombol WhatsApp -->
+                <a href="https://wa.me/6281234567890" target="_blank" class="flex items-center gap-2.5 px-6 py-3.5 bg-emerald-500 text-white font-semibold rounded-xl shadow-md hover:bg-emerald-600 hover:-translate-y-0.5 transition">
+                    <i class="fab fa-whatsapp text-xl"></i> WhatsApp
+                </a>
+
+                <!-- Tombol Instagram -->
+                <a href="https://instagram.com" target="_blank" class="flex items-center gap-2.5 px-6 py-3.5 bg-gradient-to-r from-purple-600 via-pink-500 to-amber-500 text-white font-semibold rounded-xl shadow-md hover:opacity-90 hover:-translate-y-0.5 transition">
+                    <i class="fab fa-instagram text-xl"></i> Instagram
+                </a>
+
+                <!-- Tombol TikTok -->
+                <a href="https://tiktok.com" target="_blank" class="flex items-center gap-2.5 px-6 py-3.5 bg-slate-900 text-white font-semibold rounded-xl shadow-md hover:bg-slate-800 hover:-translate-y-0.5 transition">
+                    <i class="fab fa-tiktok text-xl"></i> TikTok
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- 6. FOOTER (BAGIAN BAWAH)                   -->
+    <!-- ========================================== -->
+    <footer class="bg-slate-900 text-slate-400 py-8 text-center text-sm">
+        <div class="max-w-5xl mx-auto px-4">
+            <p>&copy; 2026 Jibran Jaris - XI TKJ 1 (SMK KARYA GUNA 2). Dibuat untuk Tugas Sekolah.</p>
+        </div>
+    </footer>
+
+    <!-- ========================================== -->
+    <!-- KODE JAVASCRIPT SEDERHANA                  -->
+    <!-- ========================================== -->
+    <script>
+        // Mengatur tombol menu navigasi saat dibuka di HP
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Menutup menu HP otomatis setelah salah satu link diklik
+        const mobileLinks = mobileMenu.querySelectorAll('a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+    </script>
+</body>
+</html>
